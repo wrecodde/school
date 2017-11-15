@@ -1,0 +1,26 @@
+<audio controls id='music'>
+	<source src='/sdcard/music/Hillsong United -- Up In Arms.mp3' type='audio/mpeg'>
+</audio>
+
+<p onclick="scratch()" id="displayed">play</p>
+
+<script>
+	var music = document.getElementById('music');
+	var display = document.getElementById('displayed');
+	alert("jane");
+	function scratch(){
+		alert("in");
+		alert(music.paused);
+		if (music.paused){
+			display.innerHTML = "pause";
+			music.play();
+		}
+		else(){
+			display.innerHTML = "play";
+			music.pause();
+		}
+	}
+		
+	alert("went well");
+	
+</script>

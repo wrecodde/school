@@ -1,0 +1,19 @@
+{
+  "name": "chatrooms",
+  "version": "0.0.1",
+  "description": "a minimal chatroom app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "~/srv/git/chatrooms.git"
+  },
+  "keywords": [
+    "chat",
+    "minimalist"
+  ],
+  "author": "wrecodde",
+  "license": "ISC"
+}

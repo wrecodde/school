@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>web schooling | on-touch.html</title>
+	<style>
+		.hiding{
+			display: none;
+		}
+		.showing{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<p>I wanted to learn how to make objects appear and disappear on touching them</p>
+	<p>let's use an example of a search button</p>
+	
+	<br/>
+	
+	<div id="workspace">
+		
+		<div id="search-example">
+			<p>touch the "button" to show and hide the search box</p>
+			<button id="call-button" onclick="searchBox()">show</button>
+			<form id="search-form" class="hiding">
+				<input type="search" name="search-box" placeholder="enter search query"/>
+				<input type="submit" value="search"/>
+			</form>
+		</div>
+		
+	</div>
+	<b id="log"></b>
+	<script>
+		var log = document.getElementById("log");
+		
+		function searchBox(){
+			var call_btn = document.getElementById("call-button");
+			var search_form = document.getElementById("search-form");
+			if (call_btn.innerHTML == "show"){
+				search_form.className = "";
+				search_form.className = "showing";
+				call_btn.innerHTML = "hide";
+				}
+            else if (call_btn.innerHTML == "hide"){
+                search_form.className = "";
+                search_form.className = "hiding";
+				call_btn.innerHTML = "show";
+				}
+			}
+		alert("good");
+	</script>
+</body>
+</html>

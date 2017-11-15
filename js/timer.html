@@ -1,0 +1,35 @@
+
+<style>
+	#timer{
+		font-size: 400%;
+		background: #c9c9c9;
+		color: #ffffff;
+		text-align: center;
+		margin: 50% auto;
+		}
+</style>
+
+<div id="timer">
+	<span id="hours"></span> : 
+	<span id="minutes"></span> : 
+	<span id="seconds"></span>
+</div>
+<script>
+	function timer(){
+    let date = new Date();
+    let hours = date.getHours();
+	let minutes = date.getMinutes();
+    let seconds = date.getSeconds();
+	
+	let showHours = document.getElementById("hours");
+	let showMinutes = document.getElementById("minutes");
+	let showSeconds = document.getElementById("seconds");
+	
+	showHours.innerHTML = hours;
+	showMinutes.innerHTML = minutes;
+	showSeconds.innerHTML = seconds;
+	}
+	timer();
+	setInterval(timer, 1000);
+	
+</script>
