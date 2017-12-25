@@ -1,0 +1,25 @@
+html
+	head
+		title
+			| #{settings.poll.title}
+		
+		meta(name="viewport" content="width=device-width, scale=1.0")
+		
+		link(rel="stylesheet" href="materialize/css/materialize.min.css")
+		link(rel="stylesheet" href="css/app.css")
+		
+		script(src="js/app.js")
+		
+	body
+		#container
+			#splash-text
+				h3
+					| #{settings.poll.title}
+				p
+					| #{settings.poll.tagline}
+				p
+					| #{settings.poll.excerpt}
+			#poll-btn
+				a(href="/auth").btn
+					| CAST YOUR VOTE
+				

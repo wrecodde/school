@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+	
+<html>
+	
+	<head>
+		<title>Ajax and XHR | Local JSON</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	
+	<body>
+		
+		<button id="fetchusers-btn">fetch users</button>
+		
+		<div id="users"></div>
+		
+		<code>console:</code>
+		<div id="console"></div>
+		
+		<script>
+			
+			document.getElementById('fetchusers-btn').addEventListener('click', fetchusers);
+			
+			
+			function log(message){
+				var console = document.getElementById('console');
+				var logged = console.innerHTML;
+				
+				console.innerHTML = logged + "<p>" + message + "</p>";
+			}
+			
+			function fetchusers(){
+				var xhr = new XMLHttpRequest();
+				
+				xhr.open('GET', 'users.json', true);
+				
+				xhr.onreadystatechange = function(){
+					if (this.readyState == 4){
+						var users = this.responseText;
+						
+						log(users);
+						JSON.parse(users);
+						log("levitate");
+					}
+				}
+				
+				xhr.send();
+			}
+			
+		</script>
+		
+	</body>
+	
+</html>

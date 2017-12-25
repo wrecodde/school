@@ -1,0 +1,34 @@
+html
+	head
+		title
+			| #{settings.poll_title} | Authentication
+		
+		meta(name="viewport", content="width=device-width, scale=1.0")
+		
+		link(rel="stylesheet", href="materialize/css/materialize.min.css")
+		link(rel="stylesheet", href="css/app.css")
+		
+		script(src="materialize/jquery/jquery-3.2.1.min.js")
+		script(src="js/app.js")
+		
+	body
+		#container
+			#splash-text
+				h3
+					| #{settings.poll.title}
+				p
+					| #{settings.poll.tagline}
+			
+			#authBox
+				h4#auth_header
+					| VOTER AUTHENTICATION
+				strong.red-text: | #{error}
+				form(method="POST")
+					#voter_idBox
+						label: | VOTER ID
+						input(type="text" name="voter_id" id="voter_id" placeholder="")
+					#voter_keyBox
+						label: | VOTER PASSKEY
+						input(type="password" name="voter_key" id="voter_key" placeholder="")
+					#auth_btnBox
+						input(type="submit" value="CONTINUE" id="auth_btn").btn

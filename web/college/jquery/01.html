@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>jQuery -- Selectors</title>
+	<meta name="viewport", content="width=device-width, scale=1.0"/>
+	<script src="jquery-3.2.1.min.js"></script>
+	<style>
+		body{
+			font-size: 17px;
+			font-family: arial;
+			background: #f4f4f4;
+			line-height: 1.5em;
+		}
+		header{
+			background: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+			border-bottom: 4px #000 solid;
+			margin-bottom: 10px;
+		}
+		#container{
+			width: 90%;
+			margin: auto;
+			padding: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>jQuery Crash Course</h1>
+	</header>
+	
+	<div id="container">
+		<h1 id="heading1">Heading One</h1>
+		<p id="para1">This is the height of nonsensical mutterings a sane man can be allowed to live with. A whiff more and we've got a loose dog who can speak English on our hands. <span>I say put it down.</span> And, it goes without saying, do not hold back or you'll get your face eaten in!</p>
+		
+		<h1 class="heading2">Heading Two</h2>
+		<p class="para2">And when a grown ass man steals candy from a baby, you can tell the end of the world is not so far away. This is the height of nonsensical mutterings a sane man can be allowed to live with. A whiff more and we've got a loose dog who can speak English on our hands. <span>I say put it down.</span></p>
+		
+		<ul id="list">
+			<li>List Item</li>
+			<li>List Item</li>
+			<li>List Item</li>
+			<li>List Item</li>
+			<li>List Item</li>
+			<li>List Item</li>
+		</ul>
+		
+		<input type="button" value="Empty Button"/>
+		<input type="submit" value="Submit Button"/>
+		<input type="text"/>
+		
+		<a href="http://netflix.com">Netflix</a>
+		<a href="http://twitter.com">Twitter</a>
+	</div>
+	
+	<script>
+		// $('h1').hide();
+		// $('h1#heading1').hide();
+		// $('h1.heading2').hide();
+		// $('.heading2').hide();
+		
+		// $('p span').css('color', 'red');
+		// $('span').css('color', 'green');
+		
+		// $('ul#list li:first').css('color', 'red');
+		// $('ul#list li:last').css('color', 'green');
+		
+		// $('ul#list li:even').css('background', '#c4c4c4');
+		// $('ul#list li:odd').css('background', '#e8e8e8');
+		
+		// $('ul#list li:nth-child(3n)').css('list-style', 'none');
+		
+		// # selecting types
+		// $(':button').hide();
+		// $(':submit').hide();
+		// $(':text').hide();
+		
+		// # selecting attibutes
+		// $('[href]').css('color', 'red');
+		// $('a[href="http://twitter.com"]').css('background', 'blue');
+		
+		// $('*').hide();
+		
+	</script>
+</body>
+
+</html>

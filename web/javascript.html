@@ -1,0 +1,27 @@
+<html>
+<head>
+	
+</head>
+<body>
+	<script type="text/javascript">
+	function validSage(){
+		box = document.sage.textbox.value;
+		document.write(box);
+		return true;
+		}
+	</script>
+	<form onsubmit="return valid()" name="signup">
+		<input type="number" placeholder="phone" name="phone"/>
+		<input type="email" placeholder="email" name="email"/>
+		<input type="password" placeholder="password" name="password"/>
+		<input type="submit" value="sign up"/>
+	</form>
+	
+	
+	<form method="POST" action="" name="sage">
+		<input type="text" name="textbox"/>
+		<input type="submit" value="validate" onclick="validSage()"/>
+	</form>
+
+</body>
+</html>

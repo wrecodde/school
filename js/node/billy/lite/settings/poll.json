@@ -1,0 +1,68 @@
+[
+	{"office_title": "president",
+	"candidates": [
+		{"screen_name": "fash",
+		"full_name": "Fasina Olayemi",
+		"tagline": "what the brave wants, he gets",
+		"img_src": "path/to/image"},
+		{"screen_name": "bolt",
+		"full_name": "Bola Tinubu",
+		"tagline": "power for the people",
+		"img_src": "path/to/image"}
+	]},
+	{"office_title": "president",
+	"candidates": [
+		{"screen_name": "fash",
+		"full_name": "Fasina Olayemi",
+		"tagline": "what the brave wants, he gets",
+		"img_src": "path/to/image"},
+		{"screen_name": "bolt",
+		"full_name": "Bola Tinubu",
+		"tagline": "power for the people",
+		"img_src": "path/to/image"}
+	]},
+	{"office_title": "vice president",
+	"candidates": [
+		{"screen_name": "pretty",
+		"full_name": "Adegbite Sade",
+		"tagline": "stand up for what you believe in",
+		"img_src": "path/to/image"}
+	]},
+	{"office_title": "general secretary",
+	"candidates": [
+		{"screen_name": "hay why",
+		"full_name": "Olagoke Ayomide",
+		"tagline": "i believe in the virtues of the people's man",
+		"img_src": "path/to/image"},
+		{"screen_name": "preacher",
+		"full_name": "Adedoyin Lawal",
+		"tagline": "who let the dogs out",
+		"img_src": "path/to/image"},
+		{"screen_name": "abutu",
+		"full_name": "Abutu Daniella",
+		"tagline": "stand up for the champions",
+		"img_src": "path/to/image"}
+	]},
+	{"office_title": "assistant general secretary",
+	"candidates": [
+		{"screen_name": "emeritus",
+		"full_name": "Benedict Uchenna",
+		"tagline": "live for the beat",
+		"img_src": "path/to/image"},
+		{"screen_name": "marcus",
+		"full_name": "Mohammed Marcus",
+		"tagline": "transparent accountancy for the people",
+		"img_src": "path/to/image"}
+	]},
+	{"office_title": "financial secretary",
+	"candidates": [
+		{"screen_name": "bola",
+		"full_name": "Hammed Adebola",
+		"tagline": "i know money and how it works",
+		"img_src": "path/to/image"},
+		{"screen_name": "kelvin",
+		"full_name": "Umeyi Kelvin",
+		"tagline": "follow the money",
+		"img_src": "path/to/image"}
+	]}
+]

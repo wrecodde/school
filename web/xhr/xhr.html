@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>AJAX!!</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	</head>
+	
+	<body>
+		<button id="showme">show me</button>
+		
+		<h4>console:</h4>
+		<div id="console"></div>
+		
+		<h4>message:</h4>
+		<div id="message"></div>
+		
+		<script>
+			// add event listener
+			document.getElementById('showme').addEventListener('click', fetchdata);
+			
+			function log(message){
+				var logged = document.getElementById('console').innerHTML;
+				if (logged != ""){
+					document.getElementById('console').innerHTML = logged + "<p>" + message + "</p>";
+				} else if (logged == ""){
+					document.getElementById('console').innerHTML = "<br/>" + "<b>" + message + "</b>";
+				}
+			}
+			
+			function fetchdata(){
+				// make xhr object
+				var xhr = new XMLHttpRequest();
+				
+				xhr.open('GET', 'sample.txt', true);
+				log('xhr is open');
+				log(xhr.readyState);
+				
+				/*
+				for (prop in xhr){
+					log(prop);
+				}*/
+				
+				xhr.onreadystatechange = function(){
+					log(xhr.readyState);
+					if (this.readyState == 4){
+						log("coins in a fountain");
+						log(this.status);
+						document.getElementById('message').innerHTML = this.responseText;
+					}
+				}
+				
+				xhr.send();
+			}
+		</script>
+	</body>
+</html>

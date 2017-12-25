@@ -1,0 +1,26 @@
+body{
+	background: #f60;
+}
+
+#container{
+	background: white;
+}
+
+#splash-text{
+	background: #eee;
+	padding: 15px;
+	font-weight: light;
+	margin: auto;
+}
+
+#poll-btn{
+	padding: 15px;
+}
+
+#authBox{
+	padding: 15px;
+}
+
+#auth_header{
+	margin-bottom: 25px;
+}

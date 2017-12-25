@@ -1,0 +1,7 @@
+ssuming you want the body width size to be a ratio of the browser's view port. I added a border so you can see the body resize as you change your browser width or height. I used a ratio of 90% of the view-port size.
+
+<!DOCTYPE html> <html lang="en"> <head>  <meta name="viewport" content="width=device-width,initial-scale=1"><title>Styles</title> <style> @media screen and (min-width: 480px) { body { background-color: skyblue; width: 90vw; height: 90vh; border: groove black; } div#main { font-size: 3vw; } } 
+
+body { background: white; } @media screen and (min-width: 980px) /* Desktop */ { body { background: red; } } @media screen and (max-width: 979px) /* Tablet */ { body { background: blue; } } @media screen and (max-width: 500px) /* Mobile */ { body { background: green; } }
+</style> </head> <body> <div id="main"> Viewport-Percentage Test </div> </body> </html>
+

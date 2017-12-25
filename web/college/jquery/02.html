@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>jQuery Crash Course -- Events</title>
+	<meta name="viewport" content="width=device-width, scake=1.0"/>
+	<script src="jquery-3.2.1.min.js"></script>
+	<style>
+		body{
+			font-size: 17px;
+			font-family: arial;
+			background: #f4f4f4;
+			line-height: 1.5em;
+		}
+		header{
+			background: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+			border-bottom: 4px #000 solid;
+			margin-bottom: 10px;
+		}
+		#container{
+			width: 90%;
+			margin: auto;
+			padding: 10px;
+		}
+		.btn{
+			padding: 2px;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>jQuery Crash Course</h1>
+	</header>
+	
+	<div id="container">
+		<h3>Mouse Events</h3>
+		<button id="btn1" class="btnClass btn">Button 1</button>
+		<button id="btn2">Button 2</button>
+		<p class="para1">And when a grown ass man steals candy from a baby, you can tell the end of the world is not so far away. This is the height of nonsensical mutterings a sane man can be allowed to live with. A whiff more and we've got a loose dog who can speak English on our hands. <span>I say put it down.</p>
+		
+		<h3 id="coords"></h3>
+		<hr/>
+		
+		<h3>Form Events</h3>
+		<form id="form">
+			<label>Name</label><br/>
+			<input type="text" id="name" name="name"/>
+			<br/>
+			
+			<label>Email</label><br/>
+			<input type="email" id="email" name="email"/>
+			<br/>
+			
+			<label>Gender</label><br/>
+			<select id="gender" name="gender">
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+			</select>
+			<br/>
+			
+			<input type="submit" value="Submit"/>
+		</form>
+		
+	</div>
+	
+	<script>
+		$(document).ready(function(){
+			// the click method
+			/*
+			$('#btn1').click(function(){
+				alert('Button Clicked');
+			});
+			
+			// the on method ::click
+			$('#btn1').on('click', function(){
+				alert('Button Clicked. Seriously');
+			});*/
+			
+			// on and off button(s)
+			/*
+			$('#btn1').on('click', function(){
+				$('.para1').hide();
+			});
+			$('#btn2').on('click', function(){
+				$('.para1').show();
+			});*/
+			
+			// or just toggle
+			/*
+			$('#btn1').on('click', function(){
+				$('.para1').toggle();
+			});*/
+			
+			// toggle on double click
+			/*
+			$('#btn1').dblclick(function(){
+				$('.para1').toggle();
+			});*/
+			
+			// hovering
+			/*
+			$('#btn1').hover(function(){
+				$('.para1').toggle();
+			});*/
+			
+			// hover() is a shortcut for on('mouseenter') and on('mouseleave')
+			// ps: not an actual event
+			/*
+			$('#btn1').on('mouseenter', function (){
+				$('.para1').toggle();
+			});*/
+			
+			// movement on the element
+			/*
+			$('#btn1').on('mousemove', function(){
+				$('.para1').toggle();
+			});*/
+			
+			// hold to hide
+			/*
+			$('#btn1').on('mousedown', function(){
+				$('.para1').toggle();
+			});
+			
+			// release to show
+			$('#btn1').on('mouseup', function(){
+				$('.para1').toggle();
+			});*/
+			
+			// event parameters
+			/*
+			$('#btn1').click(function(event){
+				// console.log(event);
+				// alert(event.currentTarget.id);
+				// alert(event.currentTarget.innerHTML);
+				// alert(event.currentTarget.outerHTML);
+				// alert(event.currentTarget.className);
+			});*/
+			
+			// cool trick
+			/*
+			$(document).on('mousemove', function(event){
+				// html: overwrites it (replace)
+				// append: adds to it
+				$('#coords').html('coordinates: X:' + event.clientX + 'Y: ' + event.clientY);
+			});*/
+			
+			// FORM EVENTS
+			$('input').focus(function(){
+				// alert("Focus, Dawg!");
+				// $('input#name').css('background', 'pink');
+				// that right there pinks #name's background even if it wasnt focused on #name
+				
+				// $(this).css('background', 'grey');
+				// this greys the background of the input on focus
+			});
+			
+			// opposites: focus<>blur
+			$('input').blur(function(){
+				$(this).css('background', 'white');
+			});
+			
+			/*
+			$('input').keyup(function(event){
+				// should have been console.log()
+				// alert('keyup');
+				alert(event.target.value);
+			});*/
+			
+			$('select#gender').change(function(event){
+				// alert("Changed!");
+				// alert(event.target.value);
+			});
+			
+			// submit event
+			$('#form').submit(function(event){
+				// the submitting process seems to not be asynchronous. so...
+				event.preventDefault();
+				var name = $('input#name').val();
+				// alert(name);
+			});
+		});
+	</script>
+</body>
+
+</html>
