@@ -1,3 +1,3 @@
-[submodule "git-app"]
-	path = git-app
+[submodule "py/glass/git-app"]
+	path = py/glass/git-app
 	url = https://github.com/wrecodde/git-app.git
