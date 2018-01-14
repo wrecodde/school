@@ -1,2 +1,0 @@
-import green
-green.paint
